@@ -4,7 +4,7 @@ import ourWedding from "../assets/ourWedding.png";
 import dateImg from "../assets/date.png";
 import danyaSofaHome from "../assets/DanyaSofaHero.png";
 
-/* helper for soft reveal on mount/in view */
+/* helper for soft reveal on view */
 function RevealOnce({ children, delay = 0, y = 12, className = "" }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.4 });
@@ -50,16 +50,15 @@ export default function Hero() {
         </RevealOnce>
       </div>
 
-      {/* Photo (kept narrow on desktop as you asked) */}
+      {/* Photo */}
       <div className="flex justify-center">
         <RevealOnce delay={0.25} y={10}>
           <motion.img
             src={danyaSofaHome}
             alt="Даня и Софа детство"
-            className="max-w-full h-auto w-[92%] md:w-[200px] lg:w-[400px] object-contain"
+            className="max-w-full h-auto md:w-[200px] lg:w-[400px] object-contain"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            /* delicate perpetual float */
             animate={{ y: [0, -3, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
           />
