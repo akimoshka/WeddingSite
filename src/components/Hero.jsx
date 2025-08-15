@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import ourWedding from "../assets/ourWedding.png";
 import dateImg from "../assets/date.png";
-import danyaSofaHome from "../assets/danyaSofaHero.png";
+import danyaSofaHome from "../assets/DanyaSofaHero.png";
 
 /* helper for soft reveal on mount/in view */
 function RevealOnce({ children, delay = 0, y = 12, className = "" }) {
